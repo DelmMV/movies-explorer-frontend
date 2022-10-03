@@ -18,6 +18,7 @@
     align-items: center;
     background: rgba(47, 47, 47, 1);
     border-radius: 3px;
+    margin: 0 10px 0 0;
 }
 
 .searchform__form-container {
@@ -174,6 +175,7 @@
 
 @media screen and (max-width: 1239px) {
     .searchform {
+        width: 93%;
         padding: 30px 0 30px 0;
     }
 }
@@ -214,7 +216,7 @@
 
 @media screen and (max-width: 500px) {
     .searchform {
-        padding: 80px 10px 40px 10px;
+        padding: 80px 0 40px 0;
     }
 
     .searchform__input::placeholder {
