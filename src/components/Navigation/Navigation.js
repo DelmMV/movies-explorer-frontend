@@ -53,7 +53,7 @@ function Navigation({loggedIn, isVisited}) {
 										<button className="navigation__button button">Регистрация</button>
 									</NavLink>
 									<NavLink to="/signin">
-										<button className="navigation__button button button_active">Войти</button>
+										<button className="navigation__button button button_active navigation__button_type_signin">Войти</button>
 									</NavLink>
 								</div>
 							</nav>

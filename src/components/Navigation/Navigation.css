@@ -32,6 +32,10 @@
     border-radius: 20px;
 }
 
+.navigation__button_type_signin {
+    color: black;
+}
+
 .button:hover {
     background-color: #13bb63;
     cursor: pointer;
