@@ -1,76 +1,38 @@
-.cards {
-
-    padding: 70px 0 80px 0;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.movies-card-list {
+  margin: 0 auto;
+  max-width: 1280px;
 }
 
-.cards__button {
-    width: 320px;
-    min-height: 36px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
-    border: 2px solid rgba(66, 66, 66, 1);
-    border-radius: 5px;
-    background-color: rgba(32, 32, 32, 1);
-    transition: 0.3s ease all;
-    margin: 80px auto 0 auto;
-    display: block;
-    color: white;
+.movies-card-list__container {
+  padding: 70px 70px 30px 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: 24px;
+  justify-content: center;
 }
 
-.cards__button_hidden {
-    display: none;
+.movies-card-list__message {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 138%;
+  color: #ffffff;
+  text-align: center;
 }
 
-.cards__button:hover {
-    background-color: white;
+@media screen and (max-width: 890px) {
+  .movies-card-list__container {
+    padding: 70px 30px 30px 30px;
+    row-gap: 36px;
+    column-gap: 30px;
+  }
 }
 
-.cards__list {
-    display: grid;
-    margin: 0;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 24px;
-    row-gap: 44px;
-    padding-left: 0;
-}
-
-@media screen and (max-width: 1239px) {
-    .cards {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .cards__list {
-        grid-template-columns: 1fr 1fr;
-        column-gap: 30px;
-        row-gap: 36px;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .cards__list {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .cards {
-        padding: 40px 10px 0 10px;
-    }
-
-    .cards__list {
-        gap: 16px;
-    }
-
-    .cards__button {
-        width: 75%;
-        margin-bottom: 80px;
-    }
+@media screen and (max-width: 600px) {
+  .movies-card-list__container {
+    padding: 40px 10px 30px 10px;
+    row-gap: 16px;
+  }
 }

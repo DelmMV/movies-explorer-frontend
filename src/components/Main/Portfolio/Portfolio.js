@@ -1,47 +1,57 @@
-import React from "react";
-import LinkImage from "../../../images/link.svg";
+import "./Portfolio.css";
 
-function Portfolio() {
-	return (
-			<section className="portfolio page__container">
-				<h2 className="portfolio__title">Портфолио</h2>
-				<ul className="portfolio__list">
-					<li className="portfolio__list-item">
-						<a
-								href="https://delmmv.github.io/how-to-learn/"
-								className="portfoio__link"
-								target="_blank"
-								rel="nooperen noreferrer"
-						>
-							<p className="portfolio__item-name">Статичный сайт</p>
-							<img className="porfolio__item-link" src={LinkImage} alt="ссылка"/>
-						</a>
-					</li>
-					<li className="portfolio__list-item">
-						<a
-								href="https://delmmv.github.io/russian-travel/"
-								className="portfoio__link"
-								target="_blank"
-								rel="nooperen noreferrer"
-						>
-							<p className="portfolio__item-name"> Адаптивный сайт</p>
-							<img className="porfolio__item-link" src={LinkImage} alt="ссылка"/>
-						</a>
-					</li>
-					<li className="portfolio__list-item">
-						<a
-								href="https://delm.nomoredomains.sbs"
-								className="portfoio__link"
-								target="_blank"
-								rel="nooperen noreferrer"
-						>
-							<p className="portfolio__item-name">Одностраничное приложение</p>
-							<img className="porfolio__item-link" src={LinkImage} alt="ссылка"/>
-						</a>
-					</li>
-				</ul>
-			</section>
-	);
+function Portfolio(props) {
+  return (
+    <section className="portfolio">
+      <div className="portfolio__container">
+        <h3 className="portfolio__header">Портфолио</h3>
+        <ul className="portfolio__list">
+          <li className="portfolio__list-item">
+            <a
+              className="portfolio__link"
+              href="https://github.com/DelmMV/how-to-learn"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Ссылка ведущая на статичный сайт"
+            >
+              <p className="portfolio__link-text">
+                Статичный сайт, о том как учиться
+              </p>
+              <p className="portfolio__link-arrow">↗</p>
+            </a>
+          </li>
+          <li className="portfolio__list-item">
+            <a
+              className="portfolio__link"
+              href="https://github.com/DelmMV/russian-travel"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Ссылка ведущая на адаптивный сайт"
+            >
+              <p className="portfolio__link-text">
+                Адаптивный сайт, путешествия по России
+              </p>
+              <p className="portfolio__link-arrow">↗</p>
+            </a>
+          </li>
+          <li className="portfolio__list-item">
+            <a
+              className="portfolio__link"
+              href="https://github.com/DelmMV/react-mesto-api-full"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Ссылка ведущая на одностраничное приложение"
+            >
+              <p className="portfolio__link-text">
+                Одностраничное приложение Mesto
+              </p>
+              <p className="portfolio__link-arrow">↗</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  );
 }
 
 export default Portfolio;
