@@ -1,19 +1,18 @@
-import React from 'react';
-import {NavLink} from 'react-router-dom';
-import NotFound from '../../images/notfound.svg'
-import './PageNotFound.css';
+import { Link, useNavigate } from "react-router-dom";
 
+import "./PageNotFound.css";
 
-function PageNotFound() {
-	return (
-			<div className="not-found">
-				<img className="not-found__image" src={NotFound} alt="Страница не найдена"/>
-				<p className="not-found__text">
-					Страница не найдена
-				</p>
-				<NavLink className="button button_type_to-main" to="/">Назад</NavLink>
-			</div>
-	)
+function PageNotFound(params) {
+  const navigate = useNavigate();
+  return (
+    <section className="page-not-found">
+      <h2 className="page-not-found__header">404</h2>
+      <p className="page-not-found__text">Страница не найдена</p>
+      <Link className="page-not-found__link" onClick={() => navigate(-2)}>
+        Назад
+      </Link>
+    </section>
+  );
 }
 
 export default PageNotFound;

@@ -1,64 +1,70 @@
-.not-found {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 440px;
-    padding-top: 246px;
-    align-items: center;
-    color: white;
+.page-not-found {
+  background: #202020;
+  min-height: 100vh;
+  padding-top: 246px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.not-found__text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    margin-top: 25px;
-    margin-bottom: 184px;
+.page-not-found__header {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 140px;
+  line-height: 169px;
+  text-align: center;
+  margin: 0;
+  color: #ffffff;
 }
 
-.button_type_to-main {
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    text-align: center;
-    color: rgba(66, 133, 244, 1);
-    padding: 0;
-    transition: 0.3s ease all;
+.page-not-found__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  margin: 0;
+  color: #ffffff;
 }
 
-.button_type_to-main:hover {
-    color: rgba(47, 93, 169, 1);
-    background-color: inherit;
+.page-not-found__link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  text-align: center;
+  margin: auto auto 0 auto;
+  color: #3ddc84;
 }
 
-@media screen and (max-width: 768px) {
-    .not-found {
-        width: 50%;
-        height: 20%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        padding-top: 0;
-    }
+@media screen and (max-width: 770px) {
+  .page-not-found {
+    padding-top: 408px;
+    padding-bottom: 222px;
+  }
 }
 
-@media screen and (max-width: 430px) {
-    .not-found__image {
-        width: 50vw;
-    }
+@media screen and (max-width: 500px) {
+  .page-not-found {
+    padding-top: 329px;
+    padding-bottom: 30px;
+  }
 
-    .not-found__text {
-        font-size: 12px;
-        line-height: 15px;
-        text-align: center;
-        margin-bottom: 36vh;
-    }
+  .page-not-found__header {
+    font-size: 80px;
+    line-height: 97px;
+  }
 
-    .not-found {
-        height: 15%;
-    }
+  .page-not-found__text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .page-not-found__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }

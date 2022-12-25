@@ -1,18 +1,52 @@
-import React from "react";
+import "./Movies.css";
+import Header from "../BaseComponents/Header/Header";
 import MoviesCardList from "./MoviesCardList/MoviesCardList";
 import SearchForm from "./SearchForm/SearchForm";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+import More from "./More/More";
+import Footer from "../BaseComponents/Footer/Footer";
 
-function Movies() {
-	return (
-			<>
-				<Header loggedIn={true} isVisited={true}/>
-				<SearchForm/>
-				<MoviesCardList/>
-				<Footer/>
-			</>
-	)
+function Movies({
+  searchKey,
+  onChangeShortsCheckbox,
+  shortsCheckbox,
+  movies,
+  shortMovies,
+  onSubmit,
+  preloader,
+  errorText,
+  handleShowMoreMovies,
+  displayMeMovies,
+  handlePutOrDeleteLike,
+  isMovieAlreadySaved,
+}) {
+  return (
+    <div className="movies">
+      <Header />
+      <SearchForm
+        onChangeShortsCheckbox={onChangeShortsCheckbox}
+        shortsCheckbox={shortsCheckbox}
+        searchKey={searchKey}
+        onSubmit={onSubmit}
+        errorText={errorText}
+      />
+      <MoviesCardList
+        displayMeMovies={displayMeMovies}
+        movies={!shortsCheckbox ? movies : shortMovies}
+        preloader={preloader}
+        handlePutOrDeleteLike={handlePutOrDeleteLike}
+        isMovieAlreadySaved={isMovieAlreadySaved}
+      />
+      {movies && !shortsCheckbox && displayMeMovies < movies.length && (
+        <More handleShowMoreMovies={handleShowMoreMovies} />
+      )}
+      {shortMovies &&
+        shortsCheckbox &&
+        displayMeMovies < shortMovies.length && (
+          <More handleShowMoreMovies={handleShowMoreMovies} />
+        )}
+      <Footer />
+    </div>
+  );
 }
 
 export default Movies;

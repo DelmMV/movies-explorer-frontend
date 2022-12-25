@@ -1,43 +1,43 @@
-import React from "react";
+import "./AboutProject.css";
 
-function AboutProject() {
-	return (
-			<section className="aboutproject page__container" id="aboutproject">
-				<h2 className="aboutproject__title">О проeкте</h2>
-				<ul className="aboutproject__two-columns">
-					<li className="aboutproject__column">
-						<h3 className="aboutproject__column-title">
-							Дипломный проект включал 5&nbsp;этапов
-						</h3>
-						<p className="aboutproject__description">
-							Составление плана, работу над бэкендом, вёрстку, добавление
-							функциональности и&nbsp;финальные доработки.
-						</p>
-					</li>
-					<li className="aboutproject__column">
-						<h3 className="aboutproject__column-title">
-							На&nbsp;выполнение диплома ушло 5&nbsp;недель
-						</h3>
-						<p className="aboutproject__description">
-							У&nbsp;каждого этапа был мягкий и&nbsp;жёсткий дедлайн, которые нужно было
-							соблюдать, чтобы успешно защититься.
-						</p>
-					</li>
-				</ul>
-				<ul className="aboutproject__timing">
-					<li className="aboutproject__timing-item">
-						<h4 className="aboutproject__timing-title aboutproject__timing-title_color_green">
-							1 неделя
-						</h4>
-						<p className="aboutproject__timing-desc">Back-end</p>
-					</li>
-					<li className="aboutproject__timing-item">
-						<h4 className="aboutproject__timing-title">4 недели</h4>
-						<p className="aboutproject__timing-desc">Front-end</p>
-					</li>
-				</ul>
-			</section>
-	);
+function AboutProject(props) {
+  return (
+    <section className="about-project" id="about-project">
+      <div className="about-project__container">
+        <h2 className="about-project__header_main">О проекте</h2>
+        <div className="about-project__details">
+          <div>
+            <h3 className="about-project__header">
+              Дипломный проект включал 5 этапов
+            </h3>
+            <p className="about-project__content">
+              Составление плана, работу над бэкендом, вёрстку, добавление
+              функциональности и финальные доработки.
+            </p>
+          </div>
+          <div>
+            <h3 className="about-project__header">
+              На выполнение диплома ушло 5 недель
+            </h3>
+            <p className="about-project__content">
+              У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было
+              соблюдать, чтобы успешно защититься.
+            </p>
+          </div>
+        </div>
+        <div className="about-project__timeline">
+          <div className="about-project__block">1 неделя</div>
+          <div className="about-project__block">4 недели</div>
+          <div className="about-project__block about-project__block_witout-borders">
+            Back-end
+          </div>
+          <div className="about-project__block about-project__block_witout-borders">
+            Front-end
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default AboutProject;
